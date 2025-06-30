@@ -13,3 +13,14 @@ input a compressed fastq file, output a compressed fastq file
 ```shell
 zcat input.fastq.gz | eb2il | gzip > output.fastq.gz
 ```
+
+## Install
+
+```shell
+git clone git@github.com:RockefellerUniversity/eb2il.git
+cd eb2il
+cargo build --release
+cp target/release/eb2il *your bin directory*
+```
+
+## not sure if the regex version will be faster.

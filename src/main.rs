@@ -3,7 +3,7 @@ use std::io::{self, BufRead, Write}; // No flate2 or crossbeam-channel needed
 fn main() -> io::Result<()> {
     let stdin = io::stdin();
     let stdout = io::stdout();
-    let mut reader = stdin.lock(); // Lock stdin for efficient line-by-line reading
+    let reader = stdin.lock(); // Lock stdin for efficient line-by-line reading
     let mut writer = stdout.lock(); // Lock stdout for efficient line-by-line writing
 
     let mut line_num = 0; // 1-based line number for processing logic
@@ -16,8 +16,8 @@ fn main() -> io::Result<()> {
             // Process 4n+4 lines
             let mut chars: Vec<char> = Vec::with_capacity(line.len());
             for c in line.chars() {
-                if (c as u32) > 75 { // Check if ASCII code is greater than 75
-                    chars.push('K'); // Replace with 'K' (ASCII 75)
+                if (c as u32) > 74 { // Check if ASCII code is greater than 74
+                    chars.push('J'); // Replace with 'J' (ASCII 74)
                 } else {
                     chars.push(c);
                 }
