@@ -1,0 +1,9 @@
+[package]
+name = "eb2il"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossbeam-channel = "0.5.15"
+flate2 = "1.1.2"
+num_cpus = "1.17.0"
